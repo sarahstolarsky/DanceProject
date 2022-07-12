@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ballroom Dance 💃</title>
+  </head>
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px 60px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      line-height: 48px;
+      font-weight: bolder;
+      margin: 0;
+      font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+        sans-serif;
+      color: #7c73e6;
+    }
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      line-height: 48px;
+      font-weight: lighter;
+      margin: 0;
+      font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+        sans-serif;
+      color: #c4c1e0;
+    }
+
+    ul {
+      font-weight: normal;
+      list-style: none;
+      color: #fafafa;
+      padding: 0;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      columns: 2;
+      column-gap: 16px;
+      column-width: 0px;
+      font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+        sans-serif;
+      font-size: 32px;
+    }
+
+    li {
+      margin: 0 auto;
+      text-align: center;
+      background: #c4c1e0;
+    }
+    .dance1 {
+      padding: 60px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      max-width: 400px;
+    }
+
+    .dance1:hover {
+      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/101/original/samba.gif?1644768657);
+    }
+
+    .dance2 {
+      padding: 60px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      max-width: 400px;
+    }
+
+    .dance2:hover {
+      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/102/original/tango.gif?1644768699);
+    }
+
+    .dance3 {
+      padding: 60px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      max-width: 400px;
+    }
+
+    .dance3:hover {
+      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/105/original/rumab.gif?1644768906);
+    }
+
+    .dance4 {
+      padding: 60px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      max-width: 400px;
+    }
+    .dance4:hover {
+      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/103/original/quickstep.gif?1644768764);
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      margin: 0 auto;
+      font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+        sans-serif;
+      color: #7c73e6;
+      font-size: 24px;
+      text-align: center;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      transition: all 200ms ease-in-out;
+      display: block;
+      margin: 0 auto;
+      padding: 20px 30px;
+      border: none;
+      background-color: #c4c1e0;
+      color: #fafafa;
+      font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+        sans-serif;
+      font-size: 24px;
+      line-height: 48px;
+      font-weight: lighter;
+      border-radius: 10px;
+      box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+    }
+
+    button:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+        sans-serif;
+      font-size: 16px;
+    }
+  </style>
+  <body>
+    <div class="content">
+      <h1><br />Ballroom Dance</h1>
+      <h2>🕺Dance like nobody's watching🕺</h2>
+      <br />
+      <ul>
+        <li class="dance1">
+          <h3>Samba</h3>
+        </li>
+        <br />
+        <li class="dance2">
+          <h3>Tango</h3>
+        </li>
+        <br />
+        <li class="dance3">
+          <h3>Rumba</h3>
+        </li>
+        <br />
+        <li class="dance4">
+          <h3>Quickstep</h3>
+        </li>
+        <br />
+      </ul>
+      <button class="dance-button">Start Dance Class</button>
+      <br />
+      <a href="https://www.youtube.com/watch?v=YZuwp1K6yAM" target="_blank">
+        Watch Me Dance!👀
+      </a>
+      <p class="footer">This page was built by Sarah Stolarsky</p>
+    </div>
+    <script>
+      function dance() {
+        let name = prompt("What is your name?");
+        let old = prompt("How old are you?");
+        let email = prompt("What is your email?");
+        if (old >= 18) {
+          alert(
+            "Thank you " +
+              name +
+              ", we will be in contact with you soon for the adult classes 💃"
+          );
+        }
+        if (old < 18) {
+          alert(
+            "Thank you " +
+              name +
+              ", we will be in contanct with you soon for the beginner classes 💃"
+          );
+        }
+      }
+      let danceButton = document.querySelector(".dance-button");
+      danceButton.addEventListener("click", dance);
+    </script>
+  </body>
+</html>
